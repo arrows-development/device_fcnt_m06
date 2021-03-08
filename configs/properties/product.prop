@@ -1,0 +1,3 @@
+
+# FUSE
+persist.sys.fuse.passthrough.enable=true
