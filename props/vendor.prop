@@ -178,6 +178,7 @@ ro.surface_flinger.wcg_composition_dataspace=142671872
 debug.sf.enable_transaction_tracing=false
 vendor.gralloc.disable_ubwc=0
 debug.hwui.renderer=skiagl
+renderthread.skia.reduceopstasksplitting=true
 
 # Keystore
 ro.hardware.keystore_desede=true
