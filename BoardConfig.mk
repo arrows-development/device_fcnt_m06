@@ -58,6 +58,9 @@ TARGET_SCREEN_DENSITY := 480
 # Filesystem
 TARGET_FS_CONFIG_GEN := $(DEVICE_PATH)/configs/config.fs
 
+# Graphics
+USE_OPENGL_RENDERER := true
+
 # Hardware
 BOARD_USES_QCOM_HARDWARE := true
 
