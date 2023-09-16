@@ -1,3 +1,6 @@
 
 # FUSE
 persist.sys.fuse.passthrough.enable=true
+
+# Logs
+persist.log.tag.OpenGLRenderer=S
