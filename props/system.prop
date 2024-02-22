@@ -31,3 +31,9 @@ persist.vendor.ims.disableQXDMLogs=1
 
 # System Server
 persist.arm64.memtag.system_server=off
+
+# Iorapd
+ro.iorapd.enable=false
+iorapd.perfetto.enable=false
+iorapd.readahead.enable=false
+persist.device_config.runtime_native_boot.iorap_readahead_enable=false
