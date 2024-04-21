@@ -47,6 +47,9 @@ TARGET_PROVIDES_AUDIO_HAL ?= true
 
 TARGET_USES_QCOM_MM_AUDIO := true
 
+# Disable sparse for ext images
+TARGET_USERIMAGES_SPARSE_EXT_DISABLED := true
+
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := parrot
 TARGET_NO_BOOTLOADER := true
