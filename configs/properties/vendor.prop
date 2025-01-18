@@ -270,9 +270,7 @@ persist.sys.lmkd.extend_reclaim.enable=true
 
 # Media
 debug.c2.use_dmabufheaps=1
-debug.mdpcomp.logs=0
 debug.stagefright.c2inputsurface=-1
-vendor.mm.enable.qcom_parser=16777215
 vendor.media.omx=0
 
 # Misc
