@@ -14,18 +14,21 @@ soong_config_module_type {
 
 soong_config_string_variable {
     name: "ufsframework",
-    values: ["sg", "bsg"],
+    values: [
+        "sg",
+        "bsg",
+    ],
 }
 
 ufsbsg_cc_defaults {
     name: "ufsbsg_defaults",
     soong_config_variables: {
         ufsframework: {
-            bsg : {
-                cflags : ["-D_BSG_FRAMEWORK_KERNEL_HEADERS"],
+            bsg: {
+                cflags: ["-D_BSG_FRAMEWORK_KERNEL_HEADERS"],
             },
         },
-     },
+    },
 }
 
 cc_library {

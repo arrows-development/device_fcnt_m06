@@ -5,6 +5,6 @@ cc_library_static {
     whole_static_libs: ["libbase"],
     include_dirs: [
         "system/libbase/include",
-        "system/core/init"
-    ]
+        "system/core/init",
+    ],
 }

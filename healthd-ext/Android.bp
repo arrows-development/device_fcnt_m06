@@ -12,7 +12,7 @@ cc_defaults {
     include_dirs: [
         "system/core/healthd",
         "system/core/healthd/include",
-        "system/core/healthd/include_charger"
+        "system/core/healthd/include_charger",
     ],
 
     static_libs: [
@@ -35,7 +35,10 @@ cc_binary {
     vendor: true,
     defaults: ["android.hardware.health-service.xiaomi-defaults"],
     init_rc: ["android.hardware.health-service.xiaomi.rc"],
-    overrides: ["charger","android.hardware.health-service.qti"],
+    overrides: [
+        "charger",
+        "android.hardware.health-service.qti",
+    ],
 }
 
 cc_binary {
@@ -44,5 +47,8 @@ cc_binary {
     recovery: true,
     defaults: ["android.hardware.health-service.xiaomi-defaults"],
     init_rc: ["android.hardware.health-service.xiaomi_recovery.rc"],
-    overrides: ["charger.recovery", "android.hardware.health-service.qti_recovery"],
+    overrides: [
+        "charger.recovery",
+        "android.hardware.health-service.qti_recovery",
+    ],
 }
