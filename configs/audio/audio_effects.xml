@@ -65,6 +65,7 @@
         <library name="dvl" path="libdlbvol.so"/>
         <library name="gamedap" path="libswgamedap.so"/>
         <library name="vqe" path="libswvqe.so"/>
+        <library name="v4a_re" path="libv4a_re.so"/>
         <library name="bundle" path="libbundlewrapper.so"/>
         <library name="reverb" path="libreverbwrapper.so"/>
         <library name="visualizer_sw" path="libvisualizer.so"/>
@@ -122,6 +123,7 @@
         <effect name="dlb_voice_call_listener" library="dvl" uuid="58d13383-b41d-05df-d94e-bb23db293260"/>
         <effect name="gamedap" library="gamedap" uuid="3783c334-d3a0-4d13-874f-0032e5fb80e2"/>
         <effect name="vqe" library="vqe" uuid="64a0f614-7fa4-48b8-b081-d59dc954616f"/>
+        <effect name="v4a_standard_re" library="v4a_re" uuid="90380da3-8536-4744-a6a3-5731970e640f"/>
         <effect name="downmix" library="downmix" uuid="93f04452-e4fe-41cc-91f9-e475b6d1d69f"/>
         <effect name="hw_acc" library="offload_bundle" uuid="7d1580bd-297f-4683-9239-e475b6d1d69f"/>
         <effect name="loudness_enhancer" library="loudness_enhancer" uuid="fa415329-2034-4bea-b5dc-5b381c8d1e2c"/>
