@@ -10,6 +10,9 @@ vendor.bluetooth.hfp.* u:object_r:vendor_bluetooth_prop:s0
 persist.vendor.EnableP3ColorSpace u:object_r:vendor_camera_p3enable_prop:s0
 vendor.camera.sensor. u:object_r:vendor_camera_sensor_prop:s0
 
+# Fastcharge HAL
+persist.vendor.sec.fastchg_enabled              u:object_r:vendor_fastcharge_prop:s0
+
 # Fingerprint
 persist.vendor.fingerprint. u:object_r:vendor_fp_prop:s0
 persist.vendor.fpc. u:object_r:vendor_fp_prop:s0
