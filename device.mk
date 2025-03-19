@@ -312,22 +312,40 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     vendor.lineage.health-service.default
 
-# Media
+# Media Codec Packages
 PRODUCT_PACKAGES += \
-    libcodec2_hidl@1.0.vendor \
-    libcodec2_vndk.vendor
-
-PRODUCT_PACKAGES += \
-    libavservices_minijail \
+    libcodec2_hidl@1.2.vendor \
+    libcodec2_soft_common.vendor \
     libavservices_minijail_vendor
 
+# Media Dolby VNDK Packages
+PRODUCT_PACKAGES += \
+    libstagefright_foundation-v33
+
+# Media Dolby Properties
+PRODUCT_VENDOR_PROPERTIES += \
+    ro.vendor.dolby.dax.version=DAX3_3.7.0.8_r1 \
+    ro.dolby.mod_uuid=false \
+    ro.dolby.music_stream=false \
+    vendor.audio.dolby.ds2.enabled=false \
+    vendor.audio.dolby.ds2.hardbypass=false \
+    ro.audio.ignore_effects=false \
+    debug.stagefright.omx_default_rank=0 \
+    debug.stagefright.c2-preferred=true
+
+# Media Dolby Dax Configurations
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/dolby/dax-default.xml:$(TARGET_COPY_OUT_VENDOR)/etc/dolby/dax-default.xml
+
+# Media Codecs Vendor Configurations
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/media/media_codecs_c2_audio.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_c2_audio.xml \
+    $(LOCAL_PATH)/configs/media/media_codecs_dolby_audio.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_dolby_audio.xml
+
+# Media Seccomp Policies
 PRODUCT_COPY_FILES += \
     $(AUDIO_HAL_DIR)/configs/common/codec2/service/1.0/c2audio.vendor.base-arm64.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/c2audio.vendor.base-arm64.policy \
     $(AUDIO_HAL_DIR)/configs/common/codec2/service/1.0/c2audio.vendor.ext-arm64.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/c2audio.vendor.ext-arm64.policy
-
-PRODUCT_COPY_FILES += \
-    $(AUDIO_HAL_DIR)/configs/common/codec2/media_codecs_c2_audio.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_c2_audio.xml \
-    $(AUDIO_HAL_DIR)/configs/common/media_codecs_vendor_audio.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_vendor_audio.xml
 
 # Memtrack
 PRODUCT_PACKAGES += \
