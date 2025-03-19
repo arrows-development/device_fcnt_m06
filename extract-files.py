@@ -104,7 +104,9 @@ blob_fixups: blob_fixups_user_type = {
     ('vendor/lib64/libqcrilNr.so', 'vendor/lib64/libril-db.so'): blob_fixup()
         .binary_regex_replace(rb'persist\.vendor\.radio\.poweron_opt', rb'persist.vendor.radio.poweron_ign'), 
     'vendor/lib64/libkaraokepal.so': blob_fixup()
-        .replace_needed('audio.primary.parrot.so', 'audio.primary.garnet.so'),         
+        .replace_needed('audio.primary.parrot.so', 'audio.primary.garnet.so'),
+    'vendor/lib64/nfc_nci.nqx.default.hw.v1.so': blob_fixup()
+        .add_needed('libbase_shim.so'),             
     'vendor/lib64/vendor.libdpmframework.so': blob_fixup()
         .add_needed('libhidlbase_shim.so'),
     ('vendor/lib64/libdlbdsservice.so', 'vendor/lib64/libdlbpreg.so', 'vendor/lib64/libcodec2_soft_ac4dec.so', 'vendor/lib64/libcodec2_soft_ddpdec.so', 'vendor/lib64/libcodec2_soft_dolby.so', 'vendor/lib64/soundfx/libdlbvol.so', 'vendor/lib64/soundfx/libswdap.so'): blob_fixup()
