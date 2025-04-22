@@ -18,7 +18,7 @@ rm -rf hardware/qcom-caf/sm8450/audio/agm && git clone https://github.com/Amrito
 
 # Graphservices
 echo 'Cloning Graphservices'
-rm -rf hardware/qcom-caf/sm8450/audio/graphservices && git clone https://github.com/LineageOS/android_vendor_qcom_opensource_audioreach-graphservices -b lineage-22.2-caf-sm8450 hardware/qcom-caf/sm8450/audio/graphservices
+rm -rf hardware/qcom-caf/sm8450/audio/graphservices && git clone https://github.com/Amrito-Projects/android_vendor_qcom_opensource_audioreach-graphservices.git -b 15 hardware/qcom-caf/sm8450/audio/graphservices
 
 # Pal
 echo 'Cloning Pal'
