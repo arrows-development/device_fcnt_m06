@@ -88,16 +88,14 @@ blob_fixups: blob_fixups_user_type = {
         .regex_replace(r'=(\d+)>', r'="\1">'),
     ('vendor/etc/init/hw/init.batterysecret.rc', 'vendor/etc/init/hw/init.mi_thermald.rc', 'vendor/etc/init/hw/init.qti.kernel.rc'): blob_fixup()
         .regex_replace(r'on charger', r'on property:init.svc.vendor.charger=running'),
+    'vendor/etc/vintf/manifest/c2_manifest_vendor.xml': blob_fixup()
+        .regex_replace(r'.+dolby.+\n', ''),
     'vendor/etc/media_codecs_parrot_v0.xml': blob_fixup()
-        .regex_replace(r'.+media_codecs_(google_audio|google_c2|google_telephony).+\n', '')
-        .regex_replace('media_codecs_vendor_audio', 'media_codecs_dolby_audio'),
+        .regex_replace(r'.+media_codecs_(google_audio|google_c2|google_telephony|vendor_audio).+\n', ''),
     'vendor/etc/perf/commonresourceconfigs.xml': blob_fixup()
         .regex_replace('.+<Minor OpcodeValue="0x16" Node="/sys/devices/system/cpu/bus_dcvs/L3/soc:qcom,memlat:l3:prime/min_freq" />+\n', '')
         .regex_replace('.+<Minor OpcodeValue="0x12" Node="/sys/devices/system/cpu/bus_dcvs/LLCC/190b6400.qcom,bwmon-llcc/max_freq" />+\n', '')
         .regex_replace('.+<Minor OpcodeValue="0x11" Node="/sys/devices/system/cpu/bus_dcvs/LLCC/190b6400.qcom,bwmon-llcc/min_freq" />+\n', ''),
-    ('vendor/lib64/hw/audio.primary.garnet.so'): blob_fixup()
-        .patchelf_version('0_17_2')
-        .replace_needed('libstagefright_foundation.so', 'libstagefright_foundation-v33.so'),
     ('vendor/lib64/hw/camera.qcom.so', 'vendor/lib64/hw/com.qti.chi.override.so', 'vendor/lib64/libcamxcommonutils.so', 'vendor/lib64/libmialgoengine.so'): blob_fixup()
         .add_needed('libprocessgroup_shim.so'),            
     'vendor/lib64/libcamximageformatutils.so': blob_fixup()
@@ -108,9 +106,6 @@ blob_fixups: blob_fixups_user_type = {
         .add_needed('libbase_shim.so'),             
     'vendor/lib64/vendor.libdpmframework.so': blob_fixup()
         .add_needed('libhidlbase_shim.so'),
-    ('vendor/lib64/libdlbdsservice.so', 'vendor/lib64/libdlbpreg.so', 'vendor/lib64/libcodec2_soft_ac4dec.so', 'vendor/lib64/libcodec2_soft_ddpdec.so', 'vendor/lib64/libcodec2_soft_dolby.so', 'vendor/lib64/soundfx/libdlbvol.so', 'vendor/lib64/soundfx/libswdap.so'): blob_fixup()
-        .patchelf_version('0_17_2')
-        .replace_needed('libstagefright_foundation.so', 'libstagefright_foundation-v33.so'),      
 }  # fmt: skip
 
 # Module definition
