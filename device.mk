@@ -502,7 +502,7 @@ PRODUCT_PACKAGES += \
     wpa_supplicant.conf
 
 PRODUCT_COPY_FILES += \
-    $(DEVICE_PATH)/configs/WCNSS_qcom_cfg.ini:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/adrastea/WCNSS_qcom_cfg.ini
+    $(DEVICE_PATH)/configs/WCNSS_qcom_cfg.ini:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/qca6750/WCNSS_qcom_cfg.ini
 
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.wifi.aware.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.wifi.aware.xml \
@@ -521,5 +521,5 @@ PRODUCT_BOOT_JARS += \
 
 # WiFi firmware symlinks
 PRODUCT_PACKAGES += \
-    firmware_adrastea_wlan_mac.bin_symlink \
-    firmware_adrastea_WCNSS_qcom_cfg.ini_symlink
+    firmware_qca6750_wlan_mac.bin_symlink \
+    firmware_qca6750_WCNSS_qcom_cfg.ini_symlink
