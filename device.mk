@@ -357,6 +357,7 @@ PRODUCT_PACKAGES += \
     CarrierConfig \
     FrameworksResCommon \
     FrameworksResTarget \
+    RegulatoryInfoOverlayM06 \
     SettingsResCommon \
     SystemUIResCommon \
     TelephonyResCommon \
