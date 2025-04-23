@@ -83,9 +83,9 @@ void vendor_load_properties() {
     string boardid = GetProperty("ro.boot.boardid", "");
 
     if (region == "India" && boardid == "S88019EP1") {
-        set_device_props("POCO", "sky", "23076PC4BI", "sky_p_in", "POCO M6 Pro 5G");
+        set_device_props("POCO", "m06", "23076PC4BI", "m06_p_in", "POCO M6 Pro 5G");
     } else {
-         set_device_props("Redmi", "sky", "23076RN4BI", "sky_in", "Redmi 12 5G");
+         set_device_props("Redmi", "m06", "23076RN4BI", "m06_in", "Redmi 12 5G");
     }
 
     // Set hardware revision

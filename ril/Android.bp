@@ -6,7 +6,7 @@
 
 android_app_import {
     name: "Ims",
-    owner: "xiaomi",
+    owner: "fcnt",
     apk: "Ims.apk",
     certificate: "platform",
     dex_preopt: {
@@ -18,7 +18,7 @@ android_app_import {
 
 android_app_import {
     name: "QtiTelephony",
-    owner: "xiaomi",
+    owner: "fcnt",
     apk: "QtiTelephony.apk",
     certificate: "platform",
     dex_preopt: {

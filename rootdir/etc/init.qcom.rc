@@ -149,10 +149,10 @@ on boot
     chmod 0777 /data/vendor/camera
     chmod 0666 /mnt/vendor/persist/camera/rear_dc_cal_wd.bin
     chmod 0666 /mnt/vendor/persist/camera/rear_dc_cal_wu.bin
-    chmod 0666 /data/vendor/camera/com.xiaomi.dcal.wd.data
-    chmod 0666 /data/vendor/camera/com.xiaomi.dcal.wu.data
-    chown system system /data/vendor/camera/com.xiaomi.dcal.wd.data
-    chown system system /data/vendor/camera/com.xiaomi.dcal.wu.data
+    chmod 0666 /data/vendor/camera/com.fcnt.dcal.wd.data
+    chmod 0666 /data/vendor/camera/com.fcnt.dcal.wu.data
+    chown system system /data/vendor/camera/com.fcnt.dcal.wd.data
+    chown system system /data/vendor/camera/com.fcnt.dcal.wu.data
 
     #Create WIGIG socket area
     mkdir /dev/socket/wigig 0770 wifi wifi

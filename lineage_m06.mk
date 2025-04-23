@@ -1,0 +1,37 @@
+#
+# Copyright (C) 2023 The Android Open Source Project
+#
+# SPDX-License-Identifier: Apache-2.0
+#
+
+DEVICE_PATH := device/fcnt/m06
+
+# Configure core_64_bit.mk
+$(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit_only.mk)
+
+# Configure full_base_telephony.mk
+$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
+
+# Inherit common Lineage configurations
+$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+
+# Inherit device configurations
+$(call inherit-product, $(DEVICE_PATH)/device.mk)
+
+# Inherit from the proprietary version
+$(call inherit-product, vendor/fcnt/m06/m06-vendor.mk)
+
+## Device identifier
+PRODUCT_DEVICE := m06
+PRODUCT_NAME := lineage_m06
+PRODUCT_BRAND := FCNT
+PRODUCT_MODEL := arrows We2 Plus
+PRODUCT_MANUFACTURER := FCNT
+
+# GMS
+PRODUCT_GMS_CLIENTID_BASE := android-fcnt
+
+PRODUCT_BUILD_PROP_OVERRIDES += \
+    BuildDesc="M06-user 14 V01RM44C M06.20240614 release-keys" \
+    BuildFingerprint=FCNT/M06/M06:14/V01RM44C/M06.20240614:user/release-keys \
+    DeviceProduct=m06_g

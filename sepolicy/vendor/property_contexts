@@ -92,7 +92,7 @@ ro.vendor.use.partial.brightness u:object_r:vendor_displayfeature_prop:s0
 ro.vendor.video.style.by.layer.support u:object_r:vendor_displayfeature_prop:s0
 ro.vendor.video_box.version u:object_r:vendor_displayfeature_prop:s0
 ro.vendor.whitepoint_calibration_enable u:object_r:vendor_displayfeature_prop:s0
-ro.vendor.xiaomi.bl.poll u:object_r:vendor_displayfeature_prop:s0
+ro.vendor.fcnt.bl.poll u:object_r:vendor_displayfeature_prop:s0
 vendor.display.enable_fb_scaling u:object_r:vendor_displayfeature_prop:s0
 vendor.display.hwc_backlight.support u:object_r:vendor_displayfeature_prop:s0
 vendor.displayfeature.entry.enable u:object_r:vendor_displayfeature_prop:s0

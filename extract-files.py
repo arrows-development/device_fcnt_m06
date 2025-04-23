@@ -22,11 +22,9 @@ from extract_utils.main import (
 )
 
 namespace_imports = [
-    'device/xiaomi/sky',
+    'device/fcnt/m06',
     'hardware/qcom-caf/sm8450',
-    'hardware/qcom-caf/sm8450/audio/agm/ipc/HwBinders/legacy',
     'hardware/qcom-caf/wlan',
-    'hardware/xiaomi',
     'vendor/qcom/opensource/commonsys/display',
     'vendor/qcom/opensource/commonsys-intf/display',
     'vendor/qcom/opensource/dataservices',
@@ -53,12 +51,29 @@ lib_fixups: lib_fixups_user_type = {
     ): lib_fixup_vendor_suffix,
     (
         'libagm',
+        'libagm_compress_plugin',
+        'libagm_mixer_plugin',
+        'libagm_pcm_plugin',
         'libagmclient',
         'libagmmixer',
+        'libmisight',
+        'libsndcardparser',
+        'libar-acdb',
+        'libar-gpr',
+        'libar-gsl',
         'libar-pal',
+        'libats',
+        'liblx-ar_util',
+        'liblx-osal',
         'libpalclient',
         'libsndcardparser',
+        'lib_bt_aptx',
+        'lib_bt_ble',
+        'lib_bt_bundle',
         'libwpa_client',
+        'vendor.qti.hardware.AGMIPC@1.0',
+        'vendor.qti.hardware.AGMIPC@1.0-impl',
+        'vendor.qti.hardware.pal@1.0',
         'vendor.qti.hardware.pal@1.0-impl',
     ): lib_fixup_remove,
 }
@@ -140,8 +155,8 @@ blob_fixups: blob_fixups_user_type = {
 }  # fmt: skip
 
 module = ExtractUtilsModule(
-    'sky',
-    'xiaomi',
+    'm06',
+    'fcnt',
     blob_fixups=blob_fixups,
     lib_fixups=lib_fixups,
     namespace_imports=namespace_imports,
