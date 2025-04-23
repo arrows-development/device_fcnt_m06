@@ -97,6 +97,9 @@ BOARD_BOOTCONFIG := \
     androidboot.usbcontroller=a600000.dwc3 \
     androidboot.init_fatal_reboot_target=recovery
 
+BOARD_KERNEL_CMDLINE += \
+    androidboot.selinux=permissive
+
 BOARD_BOOT_HEADER_VERSION := 4
 BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOT_HEADER_VERSION)
 
