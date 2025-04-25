@@ -25,7 +25,7 @@ $(call inherit-product, vendor/fcnt/m06/m06-vendor.mk)
 PRODUCT_DEVICE := m06
 PRODUCT_NAME := lineage_m06
 PRODUCT_BRAND := FCNT
-PRODUCT_MODEL := arrows We2 Plus
+PRODUCT_MODEL := M06
 PRODUCT_MANUFACTURER := FCNT
 
 # GMS
@@ -34,4 +34,4 @@ PRODUCT_GMS_CLIENTID_BASE := android-fcnt
 PRODUCT_BUILD_PROP_OVERRIDES += \
     BuildDesc="M06-user 14 V01RM44C M06.20240614 release-keys" \
     BuildFingerprint=FCNT/M06/M06:14/V01RM44C/M06.20240614:user/release-keys \
-    DeviceProduct=m06_g
+    DeviceProduct=M06
