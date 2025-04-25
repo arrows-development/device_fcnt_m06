@@ -33,6 +33,9 @@ persist.dbg.volte_avail_ovr=1
 persist.dbg.vt_avail_ovr=1
 persist.dbg.wfc_avail_ovr=1
 
+# Logtag
+persist.log.tag.sensors-hal=S
+
 #system props for the MM modules
 media.stagefright.enable-player=true
 media.stagefright.enable-http=true
