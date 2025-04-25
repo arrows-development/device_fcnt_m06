@@ -689,6 +689,11 @@ vendor/lib64/libesesbprovision.so
 vendor/lib64/vendor.qti.esepowermanager@1.0.so
 vendor/lib64/vendor.qti.esepowermanager@1.1.so
 
+# Felica
+product/etc/felica/common.cfg
+product/etc/felica/mfm.cfg
+product/etc/felica/mfs.cfg
+
 # Fingerprint
 system_ext/etc/permissions/com.fingerprints.extension.xml
 system_ext/framework/com.fingerprints.extension.jar
