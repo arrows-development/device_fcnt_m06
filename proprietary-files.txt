@@ -952,6 +952,7 @@ vendor/firmware/venus_v7.mbn
 vendor/etc/public.libraries.txt
 
 # NFC
+vendor/etc/init/init.parrot.nfc.rc
 vendor/etc/libnfc-SN220.conf
 vendor/etc/libnfc-mtp-SN100.conf
 vendor/etc/libnfc-mtp-SN100_38_4MHZ.conf
@@ -1284,6 +1285,7 @@ vendor/lib64/vendor.qti.imsrtpservice@3.0.so;MODULE_SUFFIX=_vendor
 
 # Secure element
 vendor/bin/hw/vendor.qti.secure_element@1.2-service
+vendor/etc/init/init.parrot.se.rc
 vendor/etc/init/vendor.qti.secure_element@1.2-service.rc
 vendor/lib64/android.hardware.secure_element@1.0-impl.so
 
