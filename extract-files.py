@@ -152,6 +152,8 @@ blob_fixups: blob_fixups_user_type = {
         .add_line_if_missing('gettid: 1'),
     'vendor/lib64/vendor.libdpmframework.so': blob_fixup()
         .add_needed('libhidlbase_shim.so'),
+    'vendor/etc/init/android.hardware.biometrics.fingerprint@2.1-service.m06.rc': blob_fixup()
+        .regex_replace('@2.1-service\n', '@2.1-service.m06\n'),
 }  # fmt: skip
 
 module = ExtractUtilsModule(
