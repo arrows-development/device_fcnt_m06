@@ -694,6 +694,9 @@ product/etc/felica/common.cfg
 product/etc/felica/mfm.cfg
 product/etc/felica/mfs.cfg
 
+# Felica - APK
+product/app/MobileFeliCaClient/MobileFeliCaClient.apk;PRESIGNED
+
 # Fingerprint
 system_ext/etc/permissions/com.fingerprints.extension.xml
 system_ext/framework/com.fingerprints.extension.jar
