@@ -8,5 +8,3 @@ vendor.fcnt.hardware.quickcamera::IQuickCameraService    u:object_r:hal_quickcam
 vendor.dolby.hardware.dms::IDms          u:object_r:hal_dms_hwservice:s0
 vendor.fcnt.hardware.mlipay::IMlipayService       u:object_r:hal_mlipay_hwservice:s0
 vendor.fcnt.hardware.bgservice::IBGService                 u:object_r:vendor_hal_camerapostproc_fcnt_hwservice:s0
-vendor.fcnt.hardware.fx.tunnel::IMiFxTunnel                                        u:object_r:vendor_hal_fingerprint_hwservice_fcnt:s0
-com.fingerprints.extension::IFingerprintNavigation            u:object_r:vendor_hal_fingerprint_hwservice_fcnt:s0
