@@ -34,5 +34,5 @@ rm -rf vendor/xiaomi/miuicamera-garnet && git clone https://codeberg.org/ramaadn
 
 # Viper4Fx
 echo "Cloning ViPER4AndroidFX"
-rm -rf packages/apps/ViPER4AndroidFX && git clone https://github.com/TogoFire/packages_apps_ViPER4AndroidFX packages/apps/ViPER4AndroidFX
+rm -rf packages/apps/ViPER4AndroidFX && git clone https://github.com/Amrito-Projects/Viper4AndroidFX.git packages/apps/ViPER4AndroidFX
 echo 'Cloning process is completed, now its time for lunch'
