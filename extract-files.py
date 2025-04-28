@@ -154,6 +154,13 @@ blob_fixups: blob_fixups_user_type = {
         .add_needed('libhidlbase_shim.so'),
     'vendor/etc/init/android.hardware.biometrics.fingerprint@2.1-service.m06.rc': blob_fixup()
         .regex_replace('@2.1-service\n', '@2.1-service.m06\n'),
+    (
+        'vendor/lib64/libqcrilNr.so',
+        'vendor/lib64/libril-db.so',
+    ): blob_fixup().binary_regex_replace(
+        rb'persist\.vendor\.radio\.poweron_opt',
+        rb'persist.vendor.radio.poweron_ign',
+    ),
 }  # fmt: skip
 
 module = ExtractUtilsModule(
