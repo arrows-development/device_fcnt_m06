@@ -28,6 +28,9 @@ ro.miui.build.region=in
 ro.sf.blurs_are_expensive=1
 ro.surface_flinger.supports_background_blur=1
 
+# eSIM
+masterclear.allow_retain_esim_profiles_after_fdr=true
+
 # Fuse
 persist.sys.fuse.passthrough.enable=true
 

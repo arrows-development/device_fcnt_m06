@@ -331,6 +331,7 @@ PRODUCT_COPY_FILES += \
 # RRO Overlays
 PRODUCT_PACKAGES += \
     CarrierConfig \
+    EuiccGoogleOverlayM06 \
     FrameworksResCommon \
     FrameworksResTarget \
     RegulatoryInfoOverlayM06 \

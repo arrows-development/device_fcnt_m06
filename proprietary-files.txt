@@ -689,6 +689,10 @@ vendor/lib64/libesesbprovision.so
 vendor/lib64/vendor.qti.esepowermanager@1.0.so
 vendor/lib64/vendor.qti.esepowermanager@1.1.so
 
+# eUICC
+product/etc/sysconfig/euicc.xml
+product/priv-app/EuiccGoogle/EuiccGoogle.apk;PRESIGNED
+
 # Felica
 product/etc/felica/common.cfg
 product/etc/felica/mfm.cfg
