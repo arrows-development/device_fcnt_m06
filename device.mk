@@ -71,13 +71,16 @@ PRODUCT_PACKAGES += \
     audioadsprpcd
 
 PRODUCT_PACKAGES += \
+    lib_bt_aptx:64 \
+    lib_bt_ble:64 \
+    lib_bt_bundle:64 \
+    libagm:64 \
     libagm_compress_plugin:64 \
     libagm_mixer_plugin:64 \
     libagm_pcm_plugin:64 \
     libagmclient:64 \
     libagmmixer:64 \
     libbatterylistener:64 \
-    libfmpal:64 \
     libpalclient:64 \
     libqcompostprocbundle:64 \
     libqcomvisualizer:64 \
@@ -100,7 +103,8 @@ PRODUCT_COPY_FILES += \
 
 # Audio Graph Manager
 PRODUCT_PACKAGES += \
-    vendor.qti.hardware.AGMIPC@1.0-service
+    vendor.qti.hardware.AGMIPC@1.0-service \
+    vendor.qti.hardware.AGMIPC@1.0-impl:64
 
 # Bluetooth
 PRODUCT_PACKAGES += \
@@ -228,6 +232,10 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.device_id_attestation.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.device_id_attestation.xml
+
+# Keymint
+PRODUCT_PACKAGES += \
+    android.hardware.hardware_keystore.xml
 
 # Lineage Health
 PRODUCT_PACKAGES += \

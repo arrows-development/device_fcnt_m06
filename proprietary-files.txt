@@ -63,22 +63,21 @@ vendor/etc/models/acd/music.eai
 vendor/etc/models/acd/speech.eai
 vendor/lib64/hw/audio.primary.parrot.so;DISABLE_CHECKELF
 vendor/lib64/libadm.so
-vendor/lib64/libagm.so;MAKE_COPY_RULE_ONLY
-vendor/lib64/libar-acdb.so;MAKE_COPY_RULE_ONLY
-vendor/lib64/libar-gpr.so;MAKE_COPY_RULE_ONLY
-vendor/lib64/libar-gsl.so;MAKE_COPY_RULE_ONLY
+vendor/lib64/libar-acdb.so;DISABLE_CHECKELF;MAKE_COPY_RULE_ONLY
+vendor/lib64/libar-gpr.so;DISABLE_CHECKELF;MAKE_COPY_RULE_ONLY
+vendor/lib64/libar-gsl.so;DISABLE_CHECKELF;MAKE_COPY_RULE_ONLY
 vendor/lib64/libar-pal.so;DISABLE_CHECKELF;MAKE_COPY_RULE_ONLY
-vendor/lib64/libats.so;MAKE_COPY_RULE_ONLY
+vendor/lib64/libats.so;DISABLE_CHECKELF;MAKE_COPY_RULE_ONLY
 vendor/lib64/libaudio_log_utils.so
 vendor/lib64/libcapiv2svacnnvendor.so
 vendor/lib64/libcapiv2svarnnvendor.so
 vendor/lib64/libcapiv2uvvendor.so
+vendor/lib64/libfmpal.so;MAKE_COPY_RULE_ONLY
 vendor/lib64/liblx-ar_util.so;MAKE_COPY_RULE_ONLY
 vendor/lib64/liblx-osal.so;MAKE_COPY_RULE_ONLY
-vendor/lib64/libmcs.so;DISABLE_CHECKELF;MAKE_COPY_RULE_ONLY
+vendor/lib64/libmcs.so;DISABLE_CHECKELF
 vendor/lib64/libpal_net_if.so
-vendor/lib64/libqtigefar.so;DISABLE_CHECKELF;MAKE_COPY_RULE_ONLY
-vendor/lib64/vendor.qti.hardware.AGMIPC@1.0-impl.so;DISABLE_CHECKELF;MAKE_COPY_RULE_ONLY
+vendor/lib64/libqtigefar.so;DISABLE_CHECKELF
 
 # Audio soundfx
 vendor/lib64/soundfx/libasphere.so
@@ -116,9 +115,6 @@ vendor/lib64/hw/vendor.qti.hardware.bluetooth_sar@1.1-impl.so
 vendor/lib64/hw/vendor.qti.hardware.btconfigstore@1.0-impl.so
 vendor/lib64/hw/vendor.qti.hardware.btconfigstore@2.0-impl.so
 vendor/lib64/btaudio_offload_if.so
-vendor/lib64/lib_bt_aptx.so;MAKE_COPY_RULE_ONLY
-vendor/lib64/lib_bt_ble.so;MAKE_COPY_RULE_ONLY
-vendor/lib64/lib_bt_bundle.so;MAKE_COPY_RULE_ONLY
 vendor/lib64/libbluetooth_audio_session_qti.so
 vendor/lib64/libbluetooth_audio_session_qti_2_1.so
 vendor/lib64/libbt-hidlclient.so
@@ -901,7 +897,6 @@ vendor/lib64/libqtikeymaster4.so
 # Keymint
 vendor/bin/hw/android.hardware.security.keymint-service-qti
 vendor/etc/init/android.hardware.security.keymint-service-qti.rc
-vendor/etc/permissions/android.hardware.hardware_keystore.xml
 vendor/etc/vintf/manifest/android.hardware.security.keymint-service-qti.xml
 vendor/lib64/libqtikeymint.so
 
@@ -1314,7 +1309,7 @@ vendor/bin/hw/vendor.qti.hardware.sensorscalibrate@1.0-service
 vendor/bin/init.qcom.sensors.sh
 vendor/bin/sensors.qti
 vendor/bin/sscrpcd
-vendor/etc/init/android.hardware.sensors@2.1-service-multihal.rc
+vendor/etc/init/android.hardware.sensors@2.1-service-multihal.rc:vendor/etc/init/android.hardware.sensors@2.1-service-multihal.m06.rc
 vendor/etc/init/init.vendor.sensors.rc
 vendor/etc/init/vendor.qti.hardware.sensorscalibrate@1.0-service.rc
 vendor/etc/init/vendor.sensors.qti.rc
@@ -1418,7 +1413,7 @@ vendor/etc/sensors/config/sns_transport_ppe.json
 vendor/etc/sensors/config/sns_wrist_pedo.json
 vendor/etc/sensors/hals.conf
 vendor/etc/sensors/sns_reg_config
-vendor/etc/vintf/manifest/android.hardware.sensors@2.1-multihal.xml
+vendor/etc/vintf/manifest/android.hardware.sensors@2.1-multihal.xml:vendor/etc/vintf/manifest/android.hardware.sensors@2.1-multihal.m06.xml
 vendor/lib64/hw/vendor.qti.hardware.sensorscalibrate@1.0-impl.so
 vendor/lib64/libsensorcal.so
 vendor/lib64/libsensorslog.so
