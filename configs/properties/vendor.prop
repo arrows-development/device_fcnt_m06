@@ -139,6 +139,7 @@ vendor.audio_hal.period_multiplier=3
 vendor.audio_hal.period_size=192
 
 # Bluetooth
+bluetooth.device.default_name=arrows We2 Plus
 bluetooth.hardware.power.idle_cur_ma=6
 bluetooth.hardware.power.operating_voltage_mv=3700
 bluetooth.hardware.power.rx_cur_ma=28
