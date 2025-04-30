@@ -238,8 +238,8 @@ PRODUCT_PACKAGES += \
     android.hardware.hardware_keystore.xml
 
 # Lineage Health
-PRODUCT_PACKAGES += \
-    vendor.lineage.health-service.default
+#PRODUCT_PACKAGES += \
+#    vendor.lineage.health-service.default
 
 # NFC
 PRODUCT_PACKAGES += \
