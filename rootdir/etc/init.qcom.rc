@@ -71,8 +71,6 @@ on init
     chmod 0660 /sys/fs/cgroup/memory/bg/tasks
 
 on post-fs
-    # Apply dolby fix
-    start init-dolby_fix-sh
 
 on early-boot
     # set RLIMIT_MEMLOCK to 64MB
@@ -892,12 +890,6 @@ on property:sys.boot_completed=1 && property:ro.build.type=user && property:ro.d
     chmod 0666 /sys/class/thermal/cooling_device49/cur_state
     chmod 0666 /sys/class/thermal/cooling_device50/cur_state
 
-on post-fs-data
-    service init-dolby_fix-sh /vendor/bin/init.dolby_fix.sh
-    class main
-    user system
-    group system
-    oneshot
 
 service vendor.qti.hardware.display.allocator /vendor/bin/hw/vendor.qti.hardware.display.allocator-service
     override
