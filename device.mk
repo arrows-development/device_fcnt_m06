@@ -266,6 +266,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     charger_fw_fstab.qti \
     fstab.qcom \
+    fstab.zram \
     init.garnet.rc \
     init.qcom.rc \
     init.qcom.early_boot.sh \
