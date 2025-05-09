@@ -29,8 +29,8 @@ echo 'Cloning Primary'
 rm -rf hardware/qcom-caf/sm8450/audio/primary-hal && git clone https://github.com/Amrito-Projects/android_hardware_qcom_audio-ar -b lineage-22.2-caf-sm8450 hardware/qcom-caf/sm8450/audio/primary-hal
 
 # Clone MiuiCamera
-rm -rf device/xiaomi/miuicamera-garnet && git clone https://github.com/Amrito-Projects/device_xiaomi_miuicamera-garnet.git device/xiaomi/miuicamera-garnet
-rm -rf vendor/xiaomi/miuicamera-garnet && git clone https://codeberg.org/ramaadni/vendor_xiaomi_miuicamera-garnet.git vendor/xiaomi/miuicamera-garnet
+rm -rf device/xiaomi/miuicamera-garnet && git clone https://github.com/Amrito-Projects/device_xiaomi_garnet-miuicamera.git device/xiaomi/garnet-miuicamera  
+rm -rf vendor/xiaomi/miuicamera-garnet && git clone https://github.com/Amrito-Projects/vendor_xiaomi_garnet-miuicamera.git vendor/xiaomi/garnet-miuicamera
 
 # Viper4Fx
 echo "Cloning ViPER4AndroidFX"
