@@ -12,8 +12,8 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit_only.mk)
 # Configure full_base_telephony.mk
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
-# Inherit common Lineage configurations
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+# Inherit common 2by2 configurations
+$(call inherit-product, vendor/2by2/config/common_full_phone.mk)
 
 # Inherit device configurations
 $(call inherit-product, $(DEVICE_PATH)/device.mk)
@@ -23,7 +23,7 @@ $(call inherit-product, vendor/fcnt/m06/m06-vendor.mk)
 
 ## Device identifier
 PRODUCT_DEVICE := m06
-PRODUCT_NAME := lineage_m06
+PRODUCT_NAME := m06
 PRODUCT_BRAND := FCNT
 PRODUCT_MODEL := M06
 PRODUCT_MANUFACTURER := FCNT
