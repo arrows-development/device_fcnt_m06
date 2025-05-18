@@ -199,11 +199,12 @@ BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
 # SurfaceFlinger
 TARGET_USE_AOSP_SURFACEFLINGER := true
 
-# System properties
-TARGET_ODM_PROP += $(DEVICE_PATH)/props/odm.prop
-TARGET_SYSTEM_PROP += $(DEVICE_PATH)/props/system.prop
-TARGET_SYSTEM_EXT_PROP += $(DEVICE_PATH)/props/system_ext.prop
-TARGET_VENDOR_PROP += $(DEVICE_PATH)/props/vendor.prop
+# Properties
+TARGET_ODM_PROP += $(DEVICE_PATH)/configs/properties/odm.prop
+TARGET_PRODUCT_PROP += $(DEVICE_PATH)/configs/properties/product.prop
+TARGET_SYSTEM_EXT_PROP += $(DEVICE_PATH)/configs/properties/system_ext.prop
+TARGET_SYSTEM_PROP += $(DEVICE_PATH)/configs/properties/system.prop
+TARGET_VENDOR_PROP += $(DEVICE_PATH)/configs/properties/vendor.prop
 
 # Vendor security patch
 VENDOR_SECURITY_PATCH := 2025-04-01
