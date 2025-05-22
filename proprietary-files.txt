@@ -1402,7 +1402,6 @@ vendor/lib64/hw/consumerir.qcom.so
 
 # IRQ balance
 vendor/bin/msm_irqbalance
-vendor/etc/msm_irqbalance.conf
 
 # Init
 vendor/bin/init.class_main.sh
