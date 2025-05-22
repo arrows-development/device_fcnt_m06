@@ -32,7 +32,4 @@ rm -rf hardware/qcom-caf/sm8450/audio/primary-hal && git clone https://github.co
 rm -rf device/xiaomi/miuicamera-garnet && git clone https://github.com/Amrito-Projects/device_xiaomi_miuicamera-garnet.git device/xiaomi/miuicamera-garnet
 rm -rf vendor/xiaomi/miuicamera-garnet && git clone https://codeberg.org/ramaadni/vendor_xiaomi_miuicamera-garnet.git -b lineage-22.2 vendor/xiaomi/miuicamera-garnet
 
-# Viper4Fx
-echo "Cloning ViPER4AndroidFX"
-rm -rf packages/apps/ViPER4AndroidFX && git clone https://github.com/Amrito-Projects/Viper4AndroidFX.git packages/apps/ViPER4AndroidFX
 echo 'Cloning process is completed, now its time for lunch'
