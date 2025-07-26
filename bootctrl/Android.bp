@@ -4,14 +4,15 @@
 // SPDX-License-Identifier: Apache-2.0
 //
 
-cc_binary {
-    name: "android.hardware.boot-service.qti",
-    defaults: ["android.hardware.boot-service.qti_defaults"],
+cc_library {
+    name: "bootctrl.garnet",
+    defaults: ["bootctrl_hal_defaults"],
     static_libs: ["libgptutils.garnet"],
 }
 
-cc_binary {
-    name: "android.hardware.boot-service.qti.recovery",
-    defaults: ["android.hardware.boot-service.qti.recovery_defaults"],
+cc_library_shared {
+    name: "android.hardware.boot@1.2-impl-qti",
+    stem: "android.hardware.boot@1.0-impl-1.2-qti",
+    defaults: ["android.hardware.boot@1.2-impl-qti_defaults"],
     static_libs: ["libgptutils.garnet"],
 }
