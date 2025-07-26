@@ -4,9 +4,6 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-# Call the MiuiCamera setup
-$(call inherit-product-if-exists, device/xiaomi/miuicamera-garnet/device.mk)
-
 # Enable virtual A/B OTA
 $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota/launch_with_vendor_ramdisk.mk)
 
@@ -210,14 +207,9 @@ PRODUCT_PACKAGES += \
 
 # Fastcharge
 PRODUCT_PACKAGES += \
-    vendor.lineage.fastcharge@1.0-service.garnet
+    vendor.lineage.fastcharge@1.0-service.M06
 
 # Fingerprint
-PRODUCT_PACKAGES += \
-    android.hardware.biometrics.fingerprint-service.xiaomi \
-    libudfpshandler \
-    vendor.xiaomi.hardware.fx.tunnel@1.0.vendor
-
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.fingerprint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.fingerprint.xml
 
@@ -277,7 +269,7 @@ PRODUCT_PACKAGES += \
     charger_fw_fstab.qti \
     fstab.qcom \
     fstab.zram \
-    init.garnet.rc \
+    init.M06.rc \
     init.qcom.rc \
     init.qcom.early_boot.sh \
     init.recovery.qcom.rc \
@@ -310,6 +302,9 @@ PRODUCT_COPY_FILES += \
 # libartpalette
 PRODUCT_HOST_PACKAGES += \
     libartpalette
+
+# Platform
+TARGET_BOARD_PLATFORM := parrot
 
 # Preopt SystemUI
 PRODUCT_DEXPREOPT_SPEED_APPS += SystemUIGoogle  # For internal
@@ -378,12 +373,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     vendor.qti.hardware.memtrack-service
 
-# Mlipay
-PRODUCT_PACKAGES += \
-    vendor.xiaomi.hardware.mfidoca@1.0.vendor \
-    vendor.xiaomi.hardware.mlipay@1.1.vendor \
-    vendor.xiaomi.hardware.mtdservice@1.3.vendor
-
 # Network
 PRODUCT_PACKAGES += \
     android.hardware.tetheroffload.config@1.0.vendor \
@@ -415,32 +404,17 @@ $(foreach sku, CN GL JP, \
 
 # Overlay
 PRODUCT_PACKAGES += \
-    ApertureOverlayGarnet \
-    CarrierConfigOverlayGarnet \
-    DialerOverlayGarnet \
-    FrameworkOverlayGarnet \
-    FrameworkOverlayGarnetGLEsim \
-    FrameworkOverlayGarnetJPEsim \
-    LineageSDKOverlayGarnet \
-    LineageSettingsOverlayGarnet \
-    LineageSystemUIOverlayGarnet \
-    SettingsOverlayGarnet \
-    SettingsProviderOverlayGarnetPoco \
-    SettingsProviderOverlayGarnetRedmi \
-    SettingsProviderOverlayGarnetRedmiCN \
-    SettingsProviderOverlayGarnetXIG05 \
-    SystemUIOverlayGarnet \
-    TelephonyOverlayGarnet \
-    WifiOverlayGarnet \
-    WifiOverlayGarnetPoco \
-    WifiOverlayGarnetRedmi \
-    WifiOverlayGarnetRedmiCN \
-    WifiOverlayGarnetXIG05
-
-# Parts
-PRODUCT_PACKAGES += \
-    XiaomiParts \
-    XiaomiVoIPFix
+    ApertureOverlayM06 \
+    CarrierConfigOverlayM06 \
+    DialerOverlayM06 \
+    FrameworkOverlayM06 \
+    LineageSDKOverlayM06 \
+    LineageSettingsOverlayM06 \
+    LineageSystemUIOverlayM06 \
+    SettingsOverlayM06 \
+    SystemUIOverlayM06 \
+    TelephonyOverlayM06 \
+    WifiOverlayM06
 
 # Component overrides
 PRODUCT_COPY_FILES += \
@@ -482,10 +456,8 @@ PRODUCT_PACKAGES += \
 
 # Sensors
 PRODUCT_PACKAGES += \
-    android.hardware.sensors-service.xiaomi-multihal \
-    android.frameworks.sensorservice@1.0.vendor \
-    libsensorndkbridge \
-    sensors.xiaomi.v2
+    android.hardware.sensors@2.1.vendor \
+    libsensorndkbridge
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/sensors/hals.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/hals.conf
@@ -509,39 +481,14 @@ PRODUCT_PACKAGES += \
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
-    $(LOCAL_PATH) \
-    hardware/xiaomi
+    $(LOCAL_PATH)
 
 # Telephony
 PRODUCT_PACKAGES += \
-    extphonelib \
-    extphonelib-product \
-    extphonelib.xml \
-    extphonelib_product.xml \
-    ims-ext-common \
-    ims_ext_common.xml \
-    qti-telephony-hidl-wrapper \
-    qti-telephony-hidl-wrapper-prd \
-    qti_telephony_hidl_wrapper.xml \
-    qti_telephony_hidl_wrapper_prd.xml \
-    qti-telephony-utils \
-    qti-telephony-utils-prd \
-    qti_telephony_utils.xml \
-    qti_telephony_utils_prd.xml \
-    QtiTelephonyCompat \
-    telephony-ext \
-    xiaomi-telephony-stub
-
-PRODUCT_BOOT_JARS += \
-    telephony-ext \
-    xiaomi-telephony-stub
-
-PRODUCT_PACKAGES += \
     qcrilNrDb_vendor
 
-$(foreach sku, GL JP, \
-    $(eval PRODUCT_COPY_FILES += \
-        frameworks/native/data/etc/android.hardware.telephony.euicc.xml:$(TARGET_COPY_OUT_ODM)/etc/permissions/sku_$(sku)/android.hardware.telephony.euicc.xml))
+PRODUCT_COPY_FILES += \
+    frameworks/native/data/etc/android.hardware.telephony.euicc.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.telephony.euicc.xml
 
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.telephony.cdma.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.telephony.cdma.xml \
@@ -589,11 +536,8 @@ PRODUCT_COPY_FILES += \
 
 # Vibrator
 PRODUCT_PACKAGES += \
-    vendor.qti.hardware.vibrator.service.xiaomi
+    vendor.qti.hardware.vibrator.service
 	
-PRODUCT_COPY_FILES += \
-    hardware/xiaomi/vibrator/excluded-input-devices.xml:$(TARGET_COPY_OUT_VENDOR)/etc/excluded-input-devices.xml
-
 # WiFi
 PRODUCT_PACKAGES += \
     android.hardware.wifi-service \
@@ -630,4 +574,4 @@ PRODUCT_PACKAGES += \
     libwfdaac_vendor
 
 # Vendor
-$(call inherit-product, vendor/xiaomi/garnet/garnet-vendor.mk)
+$(call inherit-product, vendor/fcnt/M06/M06-vendor.mk)

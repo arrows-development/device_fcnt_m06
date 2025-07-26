@@ -13,7 +13,7 @@
 #define TOUCH_DOUBLETAP_MODE 14
 #define TOUCH_MAGIC 't'
 #define TOUCH_IOC_SETMODE _IO(TOUCH_MAGIC, SET_CUR_VALUE)
-#define TOUCH_DEV_PATH "/dev/xiaomi-touch"
+#define TOUCH_DEV_PATH "/dev/fcnt-touch"
 #define TOUCH_ID 0
 
 namespace aidl {

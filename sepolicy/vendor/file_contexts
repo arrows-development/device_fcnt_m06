@@ -42,11 +42,8 @@
 /dev/mi_display/disp_feature u:object_r:vendor_displayfeature_device:s0
 /sys/devices/virtual/mi_display/disp_feature/disp-DSI-+[0-1](/.*)? u:object_r:vendor_sysfs_displayfeature:s0
 
-# Fastcharge HAL
-/(vendor|system/vendor)/bin/hw/vendor\.lineage\.fastcharge@[0-9]\.[0-9]-service\.garnet       u:object_r:hal_lineage_fastcharge_default_exec:s0
-
 # Fingerprint
-/(vendor|system/vendor)/bin/hw/android\.hardware\.biometrics\.fingerprint-service\.xiaomi u:object_r:hal_fingerprint_default_exec:s0
+/(vendor|system/vendor)/bin/hw/android\.hardware\.biometrics\.fingerprint-service\.fcnt u:object_r:hal_fingerprint_default_exec:s0
 /data/vendor/fpc(/.*)? u:object_r:vendor_fingerprint_data_file:s0
 /data/vendor/fpdump(/.*)? u:object_r:vendor_fingerprint_data_file_fpdump:s0
 /data/vendor/goodix(/.*)? u:object_r:vendor_fingerprint_data_file:s0
@@ -55,7 +52,7 @@
 /mnt/vendor/persist/goodix(/.*)? u:object_r:vendor_fingerprint_data_file:s0
 
 # Health
-/vendor/bin/hw/android\.hardware\.health-service\.xiaomi                              u:object_r:hal_health_default_exec:s0
+/vendor/bin/hw/android\.hardware\.health-service\.fcnt                              u:object_r:hal_health_default_exec:s0
 
 # IR
 /dev/ir_spi u:object_r:ir_spi_device:s0
@@ -67,7 +64,7 @@
 /(vendor|system/vendor)/bin/hw/vendor\.nxp\.hardware\.nfc@2\.0-service        u:object_r:hal_nfc_default_exec:s0
 
 # Sensors
-/(vendor|system/vendor)/bin/hw/android\.hardware\.sensors-service\.xiaomi-multihal u:object_r:hal_sensors_default_exec:s0
+/(vendor|system/vendor)/bin/hw/android\.hardware\.sensors-service\.fcnt-multihal u:object_r:hal_sensors_default_exec:s0
 
 # Thermal
 /(vendor|system/vendor)/bin/mi_thermald u:object_r:mi_thermald_exec:s0
@@ -78,13 +75,13 @@
 /sys/devices/virtual/thermal/thermal_message/wifi_limit u:object_r:sys_thermal_wifi_limit:s0
 
 # Touchfeature
-/dev/xiaomi-touch u:object_r:touchfeature_device:s0
+/dev/fcnt-touch u:object_r:touchfeature_device:s0
 
 # UFS discard_max_bytes
 /sys/devices/platform/soc/1d84000.ufshc/host0/target0:0:0/0:0:0:0/block/sda/queue/discard_max_bytes u:object_r:vendor_sysfs_mmc_host:s0
 
 # Vibrator
-/vendor/bin/hw/vendor\.qti\.hardware\.vibrator\.service\.xiaomi u:object_r:hal_vibrator_default_exec:s0
+/vendor/bin/hw/vendor\.qti\.hardware\.vibrator\.service\.fcnt u:object_r:hal_vibrator_default_exec:s0
 
 # Wifi
 /data/vendor/mac_addr(/.*)? u:object_r:vendor_mac_vendor_data_file:s0

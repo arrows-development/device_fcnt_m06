@@ -59,8 +59,8 @@ prebuilt_etc {
 }
 
 prebuilt_etc {
-    name: "init.garnet.rc",
-    src: "etc/init.garnet.rc",
+    name: "init.M06.rc",
+    src: "etc/init.M06.rc",
     sub_dir: "init",
     vendor: true,
 }

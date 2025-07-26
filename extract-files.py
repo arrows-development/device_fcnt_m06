@@ -31,10 +31,9 @@ from extract_utils.utils import (
 
 # Namespace imports
 namespace_imports = [
-    'device/xiaomi/garnet',
+    'device/fcnt/M06',
     'hardware/qcom-caf/sm8450',
     'hardware/qcom-caf/wlan',
-    'hardware/xiaomi',
     'vendor/qcom/opensource/commonsys/display',
     'vendor/qcom/opensource/commonsys-intf/display',
     'vendor/qcom/opensource/dataservices',
@@ -99,7 +98,7 @@ blob_fixups: blob_fixups_user_type = {
     'vendor/lib64/libcamximageformatutils.so': blob_fixup()
         .replace_needed('vendor.qti.hardware.display.config-V2-ndk_platform.so', 'vendor.qti.hardware.display.config-V2-ndk.so'),
     'vendor/lib64/libkaraokepal.so': blob_fixup()
-        .replace_needed('audio.primary.parrot.so', 'audio.primary.garnet.so'),
+        .replace_needed('audio.primary.parrot.so', 'audio.primary.M06.so'),
     'vendor/lib64/nfc_nci.nqx.default.hw.v1.so': blob_fixup()
         .add_needed('libbase_shim.so'),             
     'vendor/lib64/vendor.libdpmframework.so': blob_fixup()
@@ -108,8 +107,8 @@ blob_fixups: blob_fixups_user_type = {
 
 # Module definition
 module = ExtractUtilsModule(
-    'garnet',
-    'xiaomi',
+    'M06',
+    'fcnt',
     blob_fixups=blob_fixups,
     lib_fixups=lib_fixups,
     namespace_imports=namespace_imports,

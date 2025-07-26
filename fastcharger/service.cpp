@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-#define LOG_TAG "fastcharge@1.0-service.garnet"
+#define LOG_TAG "fastcharge@1.0-service.M06"
 
 #include <android-base/logging.h>
 #include <hidl/HidlTransportSupport.h>

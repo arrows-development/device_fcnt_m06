@@ -583,7 +583,7 @@
         <fqname>@1.0::IQccvndhal/qccvndhal</fqname>
     </hal>
     <hal format="hidl">
-        <name>vendor.xiaomi.hardware.bgservice</name>
+        <name>vendor.fcnt.hardware.bgservice</name>
         <transport>hwbinder</transport>
         <version>1.0</version>
         <interface>
@@ -593,7 +593,7 @@
         <fqname>@1.0::IBGService/default</fqname>
     </hal>
     <hal format="hidl">
-        <name>vendor.xiaomi.hardware.campostproc</name>
+        <name>vendor.fcnt.hardware.campostproc</name>
         <transport>hwbinder</transport>
         <version>1.0</version>
         <interface>
@@ -603,7 +603,7 @@
         <fqname>@1.0::IMiPostProcService/default</fqname>
     </hal>
     <hal format="hidl">
-        <name>vendor.xiaomi.hardware.fx.tunnel</name>
+        <name>vendor.fcnt.hardware.fx.tunnel</name>
         <transport>hwbinder</transport>
         <version>1.0</version>
         <interface>

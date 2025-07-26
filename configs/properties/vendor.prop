@@ -1,5 +1,5 @@
 # Audio
-ro.hardware.audio.primary=garnet
+ro.hardware.audio.primary=M06
 aaudio.hw_burst_min_usec=2000
 aaudio.mmap_exclusive_policy=2
 aaudio.mmap_policy=2
@@ -98,7 +98,7 @@ ro.bluetooth.a2dp_offload.supported=true
 # Camera
 camera.disable_zsl_mode=true
 ro.camera.enableCamera1MaxZsl=1
-ro.hardware.camera=xiaomi
+ro.hardware.camera=fcnt
 persist.vendor.camera.perflock.enable=0
 
 # Chipset
@@ -234,7 +234,7 @@ persist.vendor.radio.add_power_save=1
 persist.vendor.rcs.singlereg.feature=1
 
 # Sensors
-ro.vendor.sensors.xiaomi.udfps=true
+ro.vendor.sensors.fcnt.udfps=true
 
 # SSR
 persist.vendor.ssr.restart_level=ALL_ENABLE

@@ -1,6 +1,6 @@
 # Device Tree for POCO X6
 
-The POCO X6, codenamed "garnet", is a mid-range smartphone from Xiaomi, launched in January 2024.
+The POCO X6, codenamed "M06", is a mid-range smartphone from Xiaomi, launched in January 2024.
 
 ## Device specifications
 

@@ -265,8 +265,8 @@ on boot
     chown root system /sys/devices/platform/soc/1d84000.ufshc/ufsfbs/fbs_wholefile_enable
 
     # Xiaomi touch
-    chown system system /dev/xiaomi-touch
-    chmod 0660 /dev/xiaomi-touch
+    chown system system /dev/fcnt-touch
+    chmod 0660 /dev/fcnt-touch
 
 on property:vendor.display.lcd_density=560
    setprop dalvik.vm.heapgrowthlimit 256m
@@ -275,28 +275,28 @@ on property:vendor.display.lcd_density=640
    setprop dalvik.vm.heapgrowthlimit 512m
 
 
-on property:ro.product.name=garnet_eea
+on property:ro.product.name=M06_eea
    setprop ro.vendor.miui.support_esim true
 
-on property:ro.product.name=garnet_global && property:ro.product.mod_device=garnet_global
+on property:ro.product.name=M06_global && property:ro.product.mod_device=M06_global
    setprop ro.vendor.miui.support_esim true
 
-on property:ro.product.name=garnet_ru
+on property:ro.product.name=M06_ru
    setprop ro.vendor.miui.support_esim true
 
-on property:ro.product.name=garnet_tr
+on property:ro.product.name=M06_tr
    setprop ro.vendor.miui.support_esim true
 
-on property:ro.product.name=garnet_id
+on property:ro.product.name=M06_id
    setprop ro.vendor.miui.support_esim true
 
-on property:ro.product.mod_device=garnet_tw_global
+on property:ro.product.mod_device=M06_tw_global
    setprop ro.vendor.miui.support_esim true
 
-on property:ro.product.mod_device=garnet_jp_kd_global
+on property:ro.product.mod_device=M06_jp_kd_global
    setprop ro.vendor.miui.support_esim true
 
-on property:ro.product.mod_device=garnet_lm_cr_global
+on property:ro.product.mod_device=M06_lm_cr_global
    setprop ro.vendor.miui.support_esim true
 
 on init && property:ro.boot.mode=charger

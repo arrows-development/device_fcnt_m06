@@ -4,12 +4,13 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-DEVICE_PATH := device/xiaomi/garnet
+DEVICE_PATH := device/fcnt/M06
 
 BUILD_BROKEN_DUP_RULES := true
+BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
 
 # Inherit from proprietary files for miuicamera
--include device/xiaomi/miuicamera-garnet/BoardConfig.mk
+-include device/fcnt/miuicamera-M06/BoardConfig.mk
 
 # A/B
 AB_OTA_PARTITIONS := \
@@ -71,8 +72,7 @@ DEVICE_MATRIX_FILE := hardware/qcom-caf/common/compatibility_matrix.xml
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += \
     $(DEVICE_PATH)/configs/hidl/device_framework_compatibility_matrix.xml \
     hardware/qcom-caf/common/vendor_framework_compatibility_matrix.xml \
-    hardware/xiaomi/vintf/xiaomi_framework_compatibility_matrix.xml \
-    vendor/lineage/config/device_framework_matrix.xml
+    vendor/2by2/config/device_framework_matrix.xml
 
 DEVICE_MANIFEST_FILE := \
     $(DEVICE_PATH)/configs/hidl/manifest.xml \
@@ -86,8 +86,8 @@ $(foreach sku, CN GL JP, \
 DEVICE_FRAMEWORK_MANIFEST_FILE += $(DEVICE_PATH)/configs/hidl/framework_manifest.xml
 
 # Init
-TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_garnet
-TARGET_RECOVERY_DEVICE_MODULES := libinit_garnet
+TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_M06
+TARGET_RECOVERY_DEVICE_MODULES := libinit_M06
 
 # Kernel
 BOARD_INCLUDE_DTB_IN_BOOTIMG := true
@@ -117,18 +117,18 @@ BOARD_BOOTCONFIG := \
     androidboot.usbcontroller=a600000.dwc3
 
 # Kernel (prebuilt)
-PREBUILT_PATH := device/xiaomi/garnet-prebuilt
-BOARD_PREBUILT_DTBIMAGE_DIR := $(PREBUILT_PATH)/images/dtbs/
-BOARD_PREBUILT_DTBOIMAGE := $(PREBUILT_PATH)/images/dtbo.img
+PREBUILT_PATH := device/fcnt/M06-kernel
+BOARD_PREBUILT_DTBIMAGE_DIR := $(PREBUILT_PATH)/dtb
+BOARD_PREBUILT_DTBOIMAGE := $(PREBUILT_PATH)/dtbo.img
 
 TARGET_NO_KERNEL_OVERRIDE := true
-TARGET_KERNEL_SOURCE := $(PREBUILT_PATH)/kernel-headers
+TARGET_KERNEL_SOURCE := kernel/fcnt/sm7435
 PRODUCT_COPY_FILES += \
-	$(PREBUILT_PATH)/images/kernel:kernel
+	$(PREBUILT_PATH)/kernel:kernel
 
 # Kernel modules
-DLKM_MODULES_PATH := $(PREBUILT_PATH)/modules/dlkm
-RAMDISK_MODULES_PATH := $(PREBUILT_PATH)/modules/ramdisk
+DLKM_MODULES_PATH := $(PREBUILT_PATH)/vendor-modules
+RAMDISK_MODULES_PATH := $(PREBUILT_PATH)/ramdisk-modules
 
 BOARD_VENDOR_KERNEL_MODULES := $(wildcard $(DLKM_MODULES_PATH)/*.ko)
 BOARD_VENDOR_KERNEL_MODULES_LOAD := $(patsubst %,$(DLKM_MODULES_PATH)/%,$(shell cat $(DLKM_MODULES_PATH)/modules.load))
@@ -143,10 +143,10 @@ BOARD_VENDOR_RAMDISK_KERNEL_MODULES_BLOCKLIST_FILE := $(RAMDISK_MODULES_PATH)/mo
 $(call soong_config_set,lineage_health,charging_control_supports_bypass,false)
 
 # Partitions
-BOARD_BOOTIMAGE_PARTITION_SIZE := 201326592
+BOARD_BOOTIMAGE_PARTITION_SIZE := 100663296
 BOARD_DTBOIMG_PARTITION_SIZE := 25165824
-BOARD_RECOVERYIMAGE_PARTITION_SIZE := 104857600
-BOARD_SUPER_PARTITION_SIZE := 9663676416
+BOARD_RECOVERYIMAGE_PARTITION_SIZE := 134217728
+BOARD_SUPER_PARTITION_SIZE := 10200547328
 BOARD_VENDOR_BOOTIMAGE_PARTITION_SIZE := 100663296
 
 BOARD_FLASH_BLOCK_SIZE := 131072 # (BOARD_KERNEL_PAGESIZE * 64)
@@ -246,4 +246,4 @@ WIFI_HIDL_UNIFIED_SUPPLICANT_SERVICE_RC_ENTRY := true
 WPA_SUPPLICANT_VERSION := VER_0_8_X
 
 # Vendor
-include vendor/xiaomi/garnet/BoardConfigVendor.mk
+include vendor/fcnt/M06/BoardConfigVendor.mk

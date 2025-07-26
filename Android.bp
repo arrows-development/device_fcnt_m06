@@ -5,7 +5,6 @@
 
 soong_namespace {
     imports: [
-        "hardware/xiaomi",
         "vendor/qcom/opensource/commonsys-intf/display",
     ],
 }
@@ -27,21 +26,21 @@ install_symlink {
 prebuilt_hidl_interfaces {
     name: "hidl_bgservice_interface",
     interfaces: [
-        "vendor.xiaomi.hardware.bgservice@1.0::IBGService",
+        "vendor.fcnt.hardware.bgservice@1.0::IBGService",
     ],
 }
 
 prebuilt_hidl_interfaces {
     name: "hidl_campostproc_interface",
     interfaces: [
-        "vendor.xiaomi.hardware.campostproc@1.0::IMiPostProcService",
+        "vendor.fcnt.hardware.campostproc@1.0::IMiPostProcService",
     ],
 }
 
 prebuilt_hidl_interfaces {
     name: "hidl_quickcamera_interface",
     interfaces: [
-        "vendor.xiaomi.hardware.quickcamera@1.0::IQuickCameraService",
+        "vendor.fcnt.hardware.quickcamera@1.0::IQuickCameraService",
     ],
 }
 
