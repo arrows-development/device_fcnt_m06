@@ -73,12 +73,8 @@ DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += \
 
 DEVICE_MANIFEST_FILE := \
     $(DEVICE_PATH)/configs/hidl/manifest.xml \
-    hardware/qcom-caf/sm8450/audio/primary-hal/configs/common/manifest_non_qmaa.xml \
-
-$(foreach sku, CN GL JP, \
-    $(eval ODM_MANIFEST_SKUS += $(sku)) \
-    $(eval ODM_MANIFEST_$(sku)_FILES += \
-        $(DEVICE_PATH)/configs/hidl/manifest_nfc.xml))
+    $(DEVICE_PATH)/configs/hidl/manifest_nfc.xml \
+    hardware/qcom-caf/sm8450/audio/primary-hal/configs/common/manifest_non_qmaa.xml
 
 DEVICE_FRAMEWORK_MANIFEST_FILE += $(DEVICE_PATH)/configs/hidl/framework_manifest.xml
 
