@@ -4,7 +4,7 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-DEVICE_PATH := device/fcnt/m06
+DEVICE_PATH := device/fcnt/M06
 
 # Configure core_64_bit.mk
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit_only.mk)
@@ -19,11 +19,11 @@ $(call inherit-product, vendor/2by2/config/common_full_phone.mk)
 $(call inherit-product, $(DEVICE_PATH)/device.mk)
 
 # Inherit from the proprietary version
-$(call inherit-product, vendor/fcnt/m06/m06-vendor.mk)
+$(call inherit-product, vendor/fcnt/M06/M06-vendor.mk)
 
 ## Device identifier
-PRODUCT_DEVICE := m06
-PRODUCT_NAME := m06
+PRODUCT_DEVICE := M06
+PRODUCT_NAME := M06
 PRODUCT_BRAND := FCNT
 PRODUCT_MODEL := M06
 PRODUCT_MANUFACTURER := FCNT

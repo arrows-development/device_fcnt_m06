@@ -714,8 +714,8 @@ vendor/lib64/android.hardware.biometrics.common-V1-ndk_platform.so
 vendor/lib64/android.hardware.biometrics.fingerprint-V1-ndk_platform.so;DISABLE_CHECKELF
 
 # Fingerprint - from itc
-vendor/bin/hw/android.hardware.biometrics.fingerprint@2.1-service:vendor/bin/hw/android.hardware.biometrics.fingerprint@2.1-service.m06|37f80fa953d86631f71513c0a9f865cd6f3846b3
-vendor/etc/init/android.hardware.biometrics.fingerprint@2.1-service.rc:vendor/etc/init/android.hardware.biometrics.fingerprint@2.1-service.m06.rc|965e50abaad84856430656b0d7ba33f45bbc39bc
+vendor/bin/hw/android.hardware.biometrics.fingerprint@2.1-service:vendor/bin/hw/android.hardware.biometrics.fingerprint@2.1-service.M06|37f80fa953d86631f71513c0a9f865cd6f3846b3
+vendor/etc/init/android.hardware.biometrics.fingerprint@2.1-service.rc:vendor/etc/init/android.hardware.biometrics.fingerprint@2.1-service.M06.rc|965e50abaad84856430656b0d7ba33f45bbc39bc
 
 # FM
 system_ext/lib64/fm_helium.so
@@ -1311,7 +1311,7 @@ vendor/bin/hw/vendor.qti.hardware.sensorscalibrate@1.0-service
 vendor/bin/init.qcom.sensors.sh
 vendor/bin/sensors.qti
 vendor/bin/sscrpcd
-vendor/etc/init/android.hardware.sensors@2.1-service-multihal.rc:vendor/etc/init/android.hardware.sensors@2.1-service-multihal.m06.rc
+vendor/etc/init/android.hardware.sensors@2.1-service-multihal.rc:vendor/etc/init/android.hardware.sensors@2.1-service-multihal.M06.rc
 vendor/etc/init/init.vendor.sensors.rc
 vendor/etc/init/vendor.qti.hardware.sensorscalibrate@1.0-service.rc
 vendor/etc/init/vendor.sensors.qti.rc
@@ -1415,7 +1415,7 @@ vendor/etc/sensors/config/sns_transport_ppe.json
 vendor/etc/sensors/config/sns_wrist_pedo.json
 vendor/etc/sensors/hals.conf
 vendor/etc/sensors/sns_reg_config
-vendor/etc/vintf/manifest/android.hardware.sensors@2.1-multihal.xml:vendor/etc/vintf/manifest/android.hardware.sensors@2.1-multihal.m06.xml
+vendor/etc/vintf/manifest/android.hardware.sensors@2.1-multihal.xml:vendor/etc/vintf/manifest/android.hardware.sensors@2.1-multihal.M06.xml
 vendor/lib64/hw/vendor.qti.hardware.sensorscalibrate@1.0-impl.so
 vendor/lib64/libsensorcal.so
 vendor/lib64/libsensorslog.so

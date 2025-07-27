@@ -4,7 +4,7 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-DEVICE_PATH := device/fcnt/m06
+DEVICE_PATH := device/fcnt/M06
 
 # Inherit virtual_ab_ota_product.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota/launch_with_vendor_ramdisk.mk)
@@ -18,7 +18,7 @@ $(call soong_config_set,android_hardware_audio,run_64bit,true)
 $(call inherit-product, frameworks/native/build/phone-xhdpi-4096-dalvik-heap.mk)
 
 # Call the proprietary setup.
-$(call inherit-product, vendor/fcnt/m06/m06-vendor.mk)
+$(call inherit-product, vendor/fcnt/M06/M06-vendor.mk)
 
 # Enable updating of APEXes.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
@@ -328,8 +328,8 @@ PRODUCT_PACKAGES += \
     charger_fw_fstab.qti \
     fstab.default \
     init.class_main.sh \
-    init.m06.rc \
-    init.m06.perf.rc \
+    init.M06.rc \
+    init.M06.perf.rc \
     init.qcom.class_core.sh \
     init.qcom.early_boot.sh \
     init.qcom.post_boot.sh \
@@ -343,7 +343,7 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/bin/init.kernel.post_boot.sh:$(TARGET_COPY_OUT_VENDOR)/bin/init.kernel.post_boot.sh \
-    $(LOCAL_PATH)/rootdir/bin/init.m06.perf.sh:$(TARGET_COPY_OUT_VENDOR)/bin/init.m06.perf.sh
+    $(LOCAL_PATH)/rootdir/bin/init.M06.perf.sh:$(TARGET_COPY_OUT_VENDOR)/bin/init.M06.perf.sh
 
 # RRO Overlays
 PRODUCT_PACKAGES += \
