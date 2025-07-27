@@ -34,6 +34,6 @@ CUSTOM_PROCESSOR_INFO := Qualcomm Snapdragon 7s Gen 2
 PRODUCT_GMS_CLIENTID_BASE := android-fcnt
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    BuildDesc="M06-user 14 V01RM44C M06.20240614 release-keys" \
-    BuildFingerprint=FCNT/M06/M06:14/V01RM44C/M06.20240614:user/release-keys \
+    BuildDesc="M06-user 14 V06RM67D M06.20250425 release-keys" \
+    BuildFingerprint=FCNT/M06/M06:14/V06RM67D/M06.20250425:user/release-keys \
     DeviceProduct=M06
