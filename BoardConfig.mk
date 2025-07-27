@@ -100,6 +100,9 @@ BOARD_KERNEL_CMDLINE := \
     bootinfo.fingerprint=$(LINEAGE_VERSION) \
     swinfo.fingerprint=$(LINEAGE_VERSION)
 
+BOARD_KERNEL_CMDLINE += \
+    androidboot.selinux=permissive
+
 BOARD_BOOTCONFIG := \
     androidboot.hardware=qcom \
     androidboot.memcg=1 \
