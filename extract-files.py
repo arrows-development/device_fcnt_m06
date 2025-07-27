@@ -121,12 +121,6 @@ blob_fixups: blob_fixups_user_type = {
         .replace_needed(
             'libgrpc++_unsecure.so', 'libgrpc++_unsecure_prebuilt.so'
         ),
-    'vendor/lib64/hw/fingerprint.fpc.default.so': blob_fixup()
-        .replace_needed(
-            'com.fingerprints.extension@1.0.so', 'com.fingerprints.extension@1.0_vendor.so'
-        ),
-    'vendor/lib64/hw/fingerprint.goodix.default.so': blob_fixup()
-        .fix_soname(),
     'vendor/lib64/libcamximageformatutils.so': blob_fixup()
         .replace_needed(
             'vendor.qti.hardware.display.config-V2-ndk_platform.so', 'vendor.qti.hardware.display.config-V2-ndk.so'
@@ -153,8 +147,6 @@ blob_fixups: blob_fixups_user_type = {
         .add_line_if_missing('gettid: 1'),
     'vendor/lib64/vendor.libdpmframework.so': blob_fixup()
         .add_needed('libhidlbase_shim.so'),
-    'vendor/etc/init/android.hardware.biometrics.fingerprint@2.1-service.M06.rc': blob_fixup()
-        .regex_replace('@2.1-service\n', '@2.1-service.M06\n'),
     (
         'vendor/lib64/libqcrilNr.so',
         'vendor/lib64/libril-db.so',
@@ -162,6 +154,11 @@ blob_fixups: blob_fixups_user_type = {
         rb'persist\.vendor\.radio\.poweron_opt',
         rb'persist.vendor.radio.poweron_ign',
     ),
+    'vendor/bin/hw/android.hardware.biometrics.fingerprint-service.example.M06': blob_fixup()
+        .replace_needed('android.hardware.biometrics.common-V1-ndk_platform.so', 'android.hardware.biometrics.common-V1-ndk.so')
+        .replace_needed('android.hardware.biometrics.fingerprint-V1-ndk_platform.so', 'android.hardware.biometrics.fingerprint-V1-ndk.so'),
+    'vendor/etc/init/fingerprint-default.M06.rc': blob_fixup()
+        .regex_replace('fingerprint-service.example\n', 'fingerprint-service.example.M06\n'),
 }  # fmt: skip
 
 module = ExtractUtilsModule(
