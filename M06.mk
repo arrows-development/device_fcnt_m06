@@ -31,7 +31,7 @@ PRODUCT_MANUFACTURER := FCNT
 CUSTOM_PROCESSOR_INFO := Qualcomm Snapdragon 7s Gen 2
 
 # GMS
-PRODUCT_GMS_CLIENTID_BASE := android-fcnt
+PRODUCT_GMS_CLIENTID_BASE := android-motorola
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
     BuildDesc="M06-user 14 V06RM67D M06.20250425 release-keys" \
