@@ -3,6 +3,13 @@ vendor.camera.                                        u:object_r:vendor_camera_p
 persist.camera.                                       u:object_r:vendor_camera_prop:s0
 ro.boot.camera.                                       u:object_r:vendor_camera_prop:s0
 
+# Camera - FCNT
+vendor.fjCamera.                                      u:object_r:vendor_fcnt_core_prop:s0
+odm.media.local.camera.state                          u:object_r:vendor_fcnt_core_prop:s0
+odm.fjCamera.openstatus.                              u:object_r:vendor_fcnt_core_prop:s0
+odm.sys.temp.camera.available                         u:object_r:vendor_fcnt_core_prop:s0
+vendor.fface.error.nocamera                           u:object_r:vendor_fcnt_core_prop:s0
+
 # DDR
 vendor.ddr_training.is.start u:object_r:vendor_ddr_prop:s0
 

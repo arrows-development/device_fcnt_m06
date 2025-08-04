@@ -723,6 +723,18 @@ vendor/lib64/android.hardware.biometrics.fingerprint-V1-ndk_platform.so;DISABLE_
 vendor/bin/hw/android.hardware.biometrics.fingerprint@2.1-service:vendor/bin/hw/android.hardware.biometrics.fingerprint@2.1-service.M06|37f80fa953d86631f71513c0a9f865cd6f3846b3
 vendor/etc/init/android.hardware.biometrics.fingerprint@2.1-service.rc:vendor/etc/init/android.hardware.biometrics.fingerprint@2.1-service.M06.rc|7f5fd3ac633e7458feaaed0c0e524782ddda26f3
 
+# FjCamera
+system_ext/etc/permissions/com.fujitsu.provider.fjsettings.xml
+system_ext/etc/permissions/privapp-permissions-oem-system_ext.xml
+system_ext/framework/com.fujitsu.provider.fjsettings.jar
+system_ext/priv-app/FjCamera/FjCamera.apk
+system_ext/lib64/libSceneRecognize.so;SYMLINK=system_ext/priv-app/FjCamera/lib/arm64/libSceneRecognize.so
+system_ext/lib64/libbarhopper_v3.so;SYMLINK=system_ext/priv-app/FjCamera/lib/arm64/libbarhopper_v3.so
+system_ext/lib64/libjni_algorithm.so;SYMLINK=system_ext/priv-app/FjCamera/lib/arm64/libjni_algorithm.so
+system_ext/lib64/libnativeutils.so;SYMLINK=system_ext/priv-app/FjCamera/lib/arm64/libnativeutils.so
+system_ext/lib64/librenderscript-toolkit-scene.so;SYMLINK=system_ext/priv-app/FjCamera/lib/arm64/librenderscript-toolkit-scene.so
+system_ext/lib64/libtensorflowlite_jni_custom.so;SYMLINK=system_ext/priv-app/FjCamera/lib/arm64/libtensorflowlite_jni_custom.so
+
 # FM
 system_ext/lib64/fm_helium.so
 system_ext/lib64/libfm-hci.so

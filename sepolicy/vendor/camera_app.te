@@ -1,0 +1,5 @@
+type camera_app, domain, mlstrustedsubject;
+app_domain(camera_app)
+
+set_prop(camera_app, vendor_fcnt_core_prop)
+get_prop(camera_app, vendor_fcnt_core_prop)

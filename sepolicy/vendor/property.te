@@ -1,6 +1,9 @@
 # Camera
 vendor_public_prop(vendor_camera_sensor_prop)
 
+# Camera - FCNT
+vendor_public_prop(vendor_fcnt_core_prop)
+
 # DDR
 vendor_public_prop(vendor_ddr_prop)
 
